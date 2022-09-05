@@ -1,0 +1,82 @@
+body {
+    min-height: 500vh;
+    background-image: linear-gradient(to bottom, #787878, #afafaf);
+    color: white;
+}
+
+/* 모바일 사이드바 시작 */
+@media (max-width: 767px) {
+
+    html.mobile-side-bar-actived,
+    html.mobile-side-bar-actived>body {
+        overflow: hidden;
+    }
+}
+
+.mobile-side-bar {
+    transition: visibility 0.3s, opacity 0.3s;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.mobile-side-bar.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.mobile-side-bar__content {
+    transform: translateX(100%);
+    transition: transform 0.3s;
+}
+
+.mobile-side-bar.active .mobile-side-bar__content {
+    transform: translateX(0);
+}
+
+.mobile-side-bar__btn-close>div {
+    top: 40%;
+    transform: rotate(-45deg);
+}
+
+.mobile-side-bar__btn-close>div:last-child {
+    transform: rotate(45deg);
+}
+
+/* 모바일 사이드바 끝 */
+
+/* 모바일 메뉴 박스 1 시작 */
+.mobile-menu-box-1>ul ul {
+    display: none;
+    background-color: rgba(120, 120, 120, 0.3);
+}
+
+.mobile-menu-box-1 ul>li.active>ul {
+    display: block;
+}
+
+.mobile-menu-box-1 ul>li>a {
+    display: block;
+    padding: 20px;
+}
+
+.mobile-menu-box-1 ul>li.active>a:not(:only-child) {
+    color: red;
+    text-decoration: underline;
+}
+
+.mobile-menu-box-1 ul>li>a::after {
+    float: right;
+}
+
+.mobile-menu-box-1 ul>li>a:not(:only-child)::after {
+    content: "[+]";
+}
+
+.mobile-menu-box-1 ul>li.active>a:not(:only-child)::after {
+    content: "[-]";
+}
+
+.mobile-menu-box-1 ul>li>a:only-child::after {
+    content: ">";
+}
+
+/* 모바일 메뉴 박스 1 끝 */

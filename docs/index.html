@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>박상원의 포트폴리오</title>
+
+    <script defer src="/js/script.js"></script>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <!-- 모바일에서 기기의 해상도 능력에 상관없이 절대적인 크기로 나오도록 -->
+    <!-- 예를들어, pc에서의 300px이 모바일 에서도 똑같은 크기로 나오도록 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- 제이쿼리 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+    <!-- 폰트어썸 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <!-- 폰트어썸 FREE 아이콘 리스트 : https://fontawesome.com/v5.15/icons?d=gallery&p=2&m=free -->
+
+    <!-- 테일윈드 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.1.4/tailwind.min.css">
+    <!-- 테일윈드 치트시트 : https://nerdcave.com/tailwind-cheat-sheet -->
+
+    <!-- 모바일 탑바와 사이드바의 높이만큼 여백처리 -->
+    <div class="h-12"></div>
+
+    <!-- 탑바 시작 -->
+    <header class="top-bar hidden md:block h-12 fixed inset-0 bottom-auto bg-gray-500 text-white">
+        <div class="container mx-auto h-full flex">
+            <a href="#" class="top-bar__logo flex items-center ml-4">
+                <span><i class="far fa-lemon"></i></span>
+                &nbsp;
+                <span class="font-bold">DESIGN LEMON</span>
+            </a>
+
+            <div class="flex-grow"></div>
+
+            <nav class="top-bar__menu-box-1">
+                <ul class="flex h-full">
+                    <li class="hover:bg-white hover:text-gray-500">
+                        <a href="#" class="h-full flex items-center px-4">
+                            <span><i class="fas fa-home"></i></span>
+                            &nbsp;
+                            <span class="font-bold">HOME</span>
+                        </a>
+                    </li>
+                    <li class="hover:bg-white hover:text-gray-500">
+                        <a href="#" class="h-full flex items-center px-4">
+                            <span><i class="fas fa-id-card"></i></span>
+                            &nbsp;
+                            <span class="font-bold">ABOUT ME</span>
+                        </a>
+                    </li>
+                    <li class="hover:bg-white hover:text-gray-500">
+                        <a href="#" class="h-full flex items-center px-4">
+                            <span><i class="fas fa-newspaper"></i></span>
+                            &nbsp;
+                            <span class="font-bold">ARTICLES</span>
+                        </a>
+                    </li>
+                    <li class="hover:bg-white hover:text-gray-500">
+                        <a href="#" class="h-full flex items-center px-4">
+                            <span><i class="fas fa-people-arrows"></i></span>
+                            &nbsp;
+                            <span class="font-bold">SNS</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- 탑바 끝 -->
+
+    <!-- 모바일 탑바 시작 -->
+    <header class="mobile-top-bar fixed md:hidden fixed inset-0 bottom-auto h-12 bg-gray-500 text-white">
+        <div class="container mx-auto h-full flex">
+            <div class="flex-1"></div>
+            <a href="#" class="mobile-top-bar__logo flex items-center">
+                <span><i class="far fa-lemon"></i></span>
+                &nbsp;
+                <span class="font-bold">DESIGN LEMON</span>
+            </a>
+            <div class="flex-1 flex justify-end">
+                <span class="mobile-top-bar__btn-show-side-bar cursor-pointer flex items-center mr-3">
+                    <i class="fas fa-bars"></i>
+                </span>
+            </div>
+        </div>
+    </header>
+    <!-- 모바일 탑바 끝 -->
+
+    <!-- 모바일 사이드바 시작 -->
+    <div class="mobile-side-bar md:hidden fixed inset-0 z-50 invisible opacity-0 text-black">
+        <div class="mobile-side-bar__content flex flex-col w-80 h-full bg-white ml-auto">
+            <div class="mobile-side-bar__head flex-shrink-0 p-3">
+                <div class="mobile-side-bar__btn-close ml-auto w-8 h-8 relative cursor-pointer">
+                    <div class="absolute bg-black inset-x-0 h-1/5"></div>
+                    <div class="absolute bg-black inset-x-0 h-1/5"></div>
+                </div>
+            </div>
+            <div class="mobile-side-bar__body flex-grow overflow-y-auto">
+                <nav class="mobile-menu-box-1">
+                    <ul>
+                        <li>
+                            <a href="#">1차 메뉴 아이템 01</a>
+                            <ul>
+                                <li><a href="#">2차 메뉴 아이템 1</a></li>
+                                <li><a href="#">2차 메뉴 아이템 2</a></li>
+                                <li><a href="#">2차 메뉴 아이템 3</a></li>
+                                <li>
+                                    <a href="#">2차 메뉴 아이템 4</a>
+                                    <ul>
+                                        <li>
+                                            <a href="#">3차 메뉴 아이템 1</a>
+                                        </li>
+                                        <li><a href="#">3차 메뉴 아이템 2</a></li>
+                                        <li><a href="#">3차 메뉴 아이템 3</a></li>
+                                        <li><a href="#">3차 메뉴 아이템 4</a></li>
+                                        <li><a href="#">3차 메뉴 아이템 5</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">2차 메뉴 아이템 5</a>
+                                    <ul>
+                                        <li><a href="#">3차 메뉴 아이템 1</a></li>
+                                        <li><a href="#">3차 메뉴 아이템 2</a></li>
+                                        <li><a href="#">3차 메뉴 아이템 3</a></li>
+                                        <li><a href="#">3차 메뉴 아이템 4</a></li>
+                                        <li><a href="#">3차 메뉴 아이템 5</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">1차 메뉴 아이템 02</a>
+                            <ul>
+                                <li><a href="#">2차 메뉴 아이템 1</a></li>
+                                <li><a href="#">2차 메뉴 아이템 2</a></li>
+                                <li><a href="#">2차 메뉴 아이템 3</a></li>
+                                <li><a href="#">2차 메뉴 아이템 4</a></li>
+                                <li><a href="#">2차 메뉴 아이템 5</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">1차 메뉴 아이템 03</a>
+                        </li>
+                        <li><a href="#">1차 메뉴 아이템 04</a></li>
+                        <li><a href="#">1차 메뉴 아이템 05</a></li>
+                        <li><a href="#">1차 메뉴 아이템 06</a></li>
+                        <li><a href="#">1차 메뉴 아이템 07</a></li>
+                        <li><a href="#">1차 메뉴 아이템 08</a></li>
+                        <li><a href="#">1차 메뉴 아이템 09</a></li>
+                        <li><a href="#">1차 메뉴 아이템 10</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!-- 모바일 사이드바 끝 -->
+
+    <!-- 섹션1 시작 -->
+    <section class="section-1">
+        <div class="container mx-auto">
+            <div class="mx-3">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati eius aperiam debitis sed maiores,
+                odit quisquam consequuntur numquam voluptates. Corrupti, totam temporibus tenetur quo autem expedita
+                sapiente officiis non pariatur!
+                Ipsa accusantium, magnam unde sapiente nihil ab eum blanditiis laboriosam optio, reprehenderit suscipit
+                officiis beatae commodi rem ducimus magni atque cupiditate necessitatibus dignissimos expedita obcaecati
+                dolores. Rem voluptatum dolore deleniti.
+                Dolores laboriosam, blanditiis unde quas voluptates facere, incidunt explicabo illum adipisci nam ea
+                accusamus delectus ipsam qui soluta nemo sapiente ab natus aliquam ducimus dolorum possimus? Officiis
+                quasi fuga laudantium!
+                Quos cupiditate, voluptatum officia consequatur nobis dolorum omnis non nesciunt architecto harum
+                aspernatur, rerum, inventore quae iste repudiandae consequuntur quaerat similique explicabo. Fugit
+                maiores unde, rerum ab sint temporibus! At.
+                Nesciunt repellendus corrupti rerum in laudantium maxime nostrum officia mollitia nam consequatur sit
+                voluptate cumque architecto impedit neque, illo voluptatem quo repudiandae dolor maiores? Perferendis
+                similique minima sapiente molestias quaerat.
+            </div>
+        </div>
+    </section>
+    <!-- 섹션1 끝 -->
+
+    <!-- 폰트 -->
+    <style>
+        @font-face {
+            font-family: 'LotteMartDream';
+            font-style: normal;
+            font-weight: 400;
+            src: url('https://cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamMedium.woff2') format('woff2'), url('https://cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamMedium.woff') format('woff');
+        }
+
+        @font-face {
+            font-family: 'LotteMartDream';
+            font-style: normal;
+            font-weight: 700;
+            src: url('https://cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamBold.woff2') format('woff2'), url('https://cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamBold.woff') format('woff');
+        }
+
+        @font-face {
+            font-family: 'LotteMartDream';
+            font-style: normal;
+            font-weight: 300;
+            src: url('https://cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamLight.woff2') format('woff2'), url('https://cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamLight.woff') format('woff');
+        }
+
+        html>body {
+            font-family: 'LotteMartDream', sans-serif;
+        }
+    </style>
+</body>
+
+</html>
